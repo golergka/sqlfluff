@@ -247,9 +247,7 @@ class Linter:
             assert unparsable.pos_marker
             violations.append(
                 SQLParseError(
-                    "Line {0[0]}, Position {0[1]}: Found unparsable section: "
-                    "{1!r}".format(
-                        unparsable.pos_marker.working_loc,
+                    "Found unparsable section: {0!r}".format(
                         unparsable.raw
                         if len(unparsable.raw) < 40
                         else unparsable.raw[:40] + "...",
